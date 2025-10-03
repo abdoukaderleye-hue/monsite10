@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOKH Dadié </title><BR>
+    VOTRE BOUTIQUE en ligne</BR>
+    <style>
+        
+        body {
+            background: #f3f7fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            color: #222;
+        }
+        header {
+            background: #2e3a59;
+            color: #fff;
+            padding: 24px 0 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header-buttons {
+            margin-top: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+        .header-buttons button {
+            background: #ff5e57;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .header-buttons button:hover {
+            background: #e04841;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 0;
+            margin: 18px 0 0 0;
+        }
+        nav ul li a {
+            color: #e3eaf2;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #ff5e57;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+        .category-section {
+            margin-bottom: 50px;
+        }
+        .category-section h2 {
+            color: #2e3a59;
+            margin-bottom: 18px;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+        .products-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 28px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(46,58,89,0.07);
+            padding: 18px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 6px 18px rgba(46,58,89,0.13);
+        }
+        .product-card img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background: #e3eaf2;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px 0;
+            font-size: 1.08em;
+        }
+        .product-card .price {
+            color: #ff5e57;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .product-card button {
+            background: #2e3a59;
+            color: #fff;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .product-card button:hover {
+            background: #ff5e57;
+        }
+        footer {
+            background: #2e3a59;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            margin-top: 50px;
+        }
+        @media (max-width: 700px) {
+            .products-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .products-row {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOKH Dadié</h1> 
+        <h2>AKL_10</h2>
+        <div class="header-buttons">
+            <button onclick="window.location.href='#contact'">Contact</button>
+            <button onclick="window.location.href='#panier'">
+                Panier <span id="cart-count" style="background:#ff5e57;color:#fff;border-radius:50%;padding:2px 8px;font-size:0.9em;">0</span>
+            </button>
+            </div>
+        <nav>
+            <ul> 
+                <li><a href="#vetements">Vêtements</a></li>
+                <li><a href="#chaussures">Chaussures</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Localisation -->
+<section class="category-section" id="localisation">
+    <h2>Localisation</h2>
+    <p style="font-size:1.1em;color:#2e3a59;">
+        Nous sommes situés à Thies, Sénégal.<br>
+        <button 
+            style="background:#ff5e57;color:#fff;border:none;padding:10px 22px;border-radius:5px;font-weight:500;cursor:pointer;margin-top:10px;"
+            onclick="window.open('https://www.google.com/maps?q=thies hersent','_blank')">
+            Voir sur Google Maps
+        </button>
+    </p>
+        </section>
+        <!-- Vêtements -->
+        <section class="category-section" id="vetements">
+            <h2>Vêtements</h2>
+            <div class="products-row">
+                <div class="product-card">
+                    <img src="VJAV3031.JPG" alt="Vêtement">
+                    <h3>Vêtement </h3>
+                    <div class="price">5000 FCFA</div>
+                        <button>Ajouter au panier</button>      
+                </div>
+                <div class="product-card">
+                    <img src="ASFO5144.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">4500 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="BYFC1221.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">7500 FCFA</div>
+                    <button>Ajouter au panier</button>  
+                </div>
+                <div class="product-card">
+                    <img src="AEEX7117.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">4000 FCFA</div>
+                    <button>Ajouter au panier</button>  
+                </div>
+                <div class="product-card">
+                    <img src="AEPF3536.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">5500 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="VIJG4839.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">5000FCFA</div>
+                    <button>Ajouter au panier</button>  
+                </div>
+                <div class="product-card">
+                    <img src="YKQU3329.JPG" alt="Vêtement 4">
+                    <h3>Vêtement 4</h3>
+                    <div class="price">6000 FCFA</div>
+                    <button>Ajouter au panier</button>  
+                </div>
+                <div class="product-card">
+                    <img src="AQDH9423.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">5000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                   <div class="product-card">
+                    <img src="CAAY6742.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">5500 FCFA</div>
+                    <button>Ajouter au panier</button>  
+                   </div>  
+                   <div class="product-card">
+                    <img src="DTUV9501.JPG" alt="Vêtement ">
+                    <h3>Vêtement </h3>
+                    <div class="price">4000 FCFA</div>
+                    <button>Ajouter au panier</button>  
+                   </div>
+                     <div class="product-card">
+                      <img src="AAKI1453.JPG" alt="Vêtement ">
+                      <h3>Vêtement </h3>
+                      <div class="price">11000 FCFA</div>    
+                        <button>Ajouter au panier</button>
+                        </div>
+                        <div class="product-card">  
+                            <img src="ABOT4878.JPG" alt="Vêtement ">
+                            <h3>Vêtement </h3>
+                            <div class="price">7000 FCFA</div>
+                            <button>Ajouter au panier</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="BMBV8778.JPG" alt="Vêtement ">
+                            <h3>Vêtement </h3>
+                            <div class="price">8000 FCFA</div>
+                            <button>Ajouter au panier</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="HEPT7582.JPG" alt="Vêtement ">
+                            <h3>Vêtement </h3>
+                            <div class="price">8000 FCFA</div>
+                            <button>Ajouter au panier</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="FMSU2347.JPG" alt="Vêtement ">
+                            <h3>Vêtement </h3>
+                            <div class="price">6000 FCFA</div>
+                            <button>Ajouter au panier</button>
+                        </div>
+                        <div class="product-card">
+                            <img src="FLEU2869.JPG" alt="Vêtement ">
+                            <h3>Vêtement </h3>
+                            <div class="price">6000 FCFA</div>
+                            <button>Ajouter au panier</button>
+                        </div>
+
+            </div>
+
+        </section>
+        <!-- Chaussures -->
+        <section class="category-section" id="chaussures">
+            <h2>Chaussures</h2>
+            <div class="products-row">
+                <div class="product-card">
+                    <img src="CPKK1517.JPG" alt="fashionable shoe positioned upright on a white background with soft lighting, shoe is new and unworn, environment is a professional studio, mood is neutral and polished" width="400px" height="400px">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="EXRG3376.JPG" alt="Chaussure ">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="JTSX5880.JPG" alt="Chaussure " ">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="QVWT6349.JPG" alt="Chaussure " >
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="RMWE5695.JPG" alt="Chaussure ">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>      
+                </div>
+                <div class="product-card">
+                    <img src="XEFW7443.JPG" alt="Chaussure x">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="ETFA7906.JPG" alt="Chaussure x">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+                <div class="product-card">
+                    <img src="HEWX3964.JPG" alt="Chaussure  ">
+                    <h3>Chaussure </h3>
+                    <div class="price">15000 FCFA</div>
+                    <button>Ajouter au panier</button>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+<section class="category-section" id="contact">
+    <h2>Contactez-nous</h2>
+    <div style="text-align:center; margin-bottom: 25px;">
+        <p style="font-size:1.1em; color:#2e3a59; margin-bottom: 15px; font-weight:500;">
+            Le moyen le plus rapide de commander ? Contactez-nous sur WhatsApp !
+        </p>
+        <a href="https://wa.me/221783449838?text=Bonjour%20DOKH%20Dadié,%20je%20souhaite%20finaliser%20ma%20commande%20ou%20poser%20une%20question." 
+           target="_blank" 
+           style="background:#25D366; color:#fff; padding: 14px 35px; border-radius:8px; font-weight:700; text-decoration:none; display:inline-block; font-size:1.1em; box-shadow:0 4px 12px rgba(37,211,102,0.4); transition: background 0.2s;">
+           💬 Démarrer la conversation (WhatsApp)
+        </a>
+    </div>
+    <div style="max-width:500px;margin:auto;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(46,58,89,0.10);padding:30px;">
+        <p style="font-size:1.1em;color:#2e3a59;text-align:center;">
+            Vous préférez le contact par e-mail ? Remplissez ce formulaire.
+        </p>
+        <form action="leyekader8@gmail.com" method="POST">  
+            <div style="margin-bottom:16px;">
+                <label for="nom" style="font-weight:500;">Nom :</label>
+                <input type="text" id="nom" name="Nom" required 
+                    style="width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;margin-top:5px;">
+            </div>
+            <div style="margin-bottom:16px;">
+                <label for="email" style="font-weight:500;">Email :</label>
+                <input type="email" id="email" name="_replyto" required 
+                    style="width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;margin-top:5px;">
+            </div>
+            <div style="margin-bottom:16px;">
+                <label for="telephone" style="font-weight:500;">Téléphone :</label>
+                <input type="tel" id="telephone" name="Telephone" 
+                    style="width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;margin-top:5px;">
+            </div>
+            <div style="margin-bottom:16px;">
+                <label for="message" style="font-weight:500;">Message :</label>
+                <textarea id="message" name="Message" rows="5" required 
+                    style="width:100%;padding:10px;border-radius:6px;border:1px solid #ccc;margin-top:5px;"></textarea>
+            </div>
+            <button type="submit" 
+                style="background:#ff5e57;color:#fff;border:none;padding:12px 32px;border-radius:6px;font-weight:600;font-size:1.1em;cursor:pointer;box-shadow:0 2px 8px rgba(46,58,89,0.10);">
+                Envoyer le message
+            </button>
+        </form>
+        <div style="margin-top:28px;text-align:center;">
+            <span style="color:#2e3a59;font-weight:500;">Ou contactez-nous directement par téléphone :</span><br>
+            <a href="tel:+221783449838" style="color:#ff5e57;text-decoration:none;font-weight:600;font-size:1.1em;">+221 78 344 98 38</a>
+        </div>
+    </div>
+</section>
+        <!-- Panier Section -->
+        <section class="category-section" id="panier">
+            <h2>Panier</h2>
+           <button onclick="alert('produit ajouté au panier !')" ;">Ajouter au panier
+        </button>
+            <p style="text-align:center;color:#888;">Votre panier est vide.</p>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 DOKH Dadié. Tous droits réservés.
+    </footer>
+<script>
+const cartItems = [];
+function addToCart(productName, productPrice) {
+    const price = parseInt(productPrice.replace(/ FCFA|FCFA/g, '').trim());
+    if (isNaN(price) || price === 0) {
+        alert(`Erreur : Le prix pour ${productName} n'est pas valide. Veuillez mettre à jour le prix.`);
+        return;
+    }
+    const existingItem = cartItems.find(item => item.name === productName);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cartItems.push({ name: productName, price: price, quantity: 1 });
+    }
+    updateCartDisplay();
+}
+function updateCartDisplay() {
+    const cartSection = document.getElementById('panier');
+    let total = 0;
+    let htmlContent = '<h2>Panier</h2>';
+    if (cartItems.length === 0) {
+        htmlContent += '<p style="text-align:center;color:#888;">Votre panier est vide.</p>';
+    } else {
+        htmlContent += '<ul style="list-style:none;padding:0;max-width:400px;margin:20px auto;">';
+        cartItems.forEach(item => {
+            total += item.price * item.quantity;
+            htmlContent += `
+                <li style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eee;font-size:1.1em;">
+                    <span>${item.name} (x${item.quantity})</span>
+                    <span style="font-weight:bold;">${item.price * item.quantity} FCFA</span>
+                </li>
+            `;
+        });
+        htmlContent += '</ul>';
+        htmlContent += `
+            <h3 style="text-align:center;color:#2e3a59;margin-top:20px;">
+                Total : <span style="color:#ff5e57;">${total} FCFA</span>
+            </h3>
+            <div style="text-align:center;margin-top:20px;">
+                <button 
+                    onclick="alert('Veuillez passer votre commande via la section Contact et indiquer ce total : ${total} FCFA.');"
+                    style="background:#ff5e57;color:#fff;border:none;padding:12px 30px;border-radius:6px;font-weight:600;cursor:pointer;">
+                    Commander (Finaliser l\'achat)
+                </button>
+            </div>
+        `;
+    }
+    cartSection.innerHTML = htmlContent;
+
+    // Mettre à jour le compteur dans le bouton d'en-tête
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = cartItems.length;
+    }
+}
+window.onload = updateCartDisplay;
+</script>
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
